@@ -1,0 +1,53 @@
+:root {
+  --transition: 250ms ease-in-out;
+}
+
+.navlink {
+  position: relative;
+  transform: translateY(0);
+}
+
+.navlink:last-of-type {
+  transition: transform var(--transition);
+  transition-delay: 50ms;
+}
+
+.navlink::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left ;
+  width: 100%;
+  height: 3px;
+  background-color: #eaeaea;
+  transition: transform var(--transition);
+  border-radius: 50vh;
+}
+
+.navlink:hover::after {
+  transform: scaleX(1);
+}
+
+.navlink[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.menu {
+  transition: var(--transition);
+  margin-right: 10rem;
+}
+
+.menu[data-toggle="true"] {
+  opacity: 1;
+}
+
+.menu[data-toggle="false"] {
+  opacity: 0;
+}
+
+.menu[data-toggle="false"] .navlink {
+  transform: translateY(-50%);
+  background-color: transparent;
+}

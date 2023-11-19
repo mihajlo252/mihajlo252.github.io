@@ -1,0 +1,26 @@
+{
+    "someMarkdown": {
+        "title": "Some Markdown",
+        "file": "someMarkdown.md",
+        "previewImage": "forrest.jpg",
+        "previewText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus mollitia, numquam ea vitae sed sunt fuga molestiae eum iste.",
+        "author": "Mihajlo Kostić",
+        "date": "2023-08-14"
+    },
+    "anotherMarkdown": {
+        "title": "Another Markdown",
+        "file": "anotherMarkdown.md",
+        "previewImage": "road.jpg",
+        "previewText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus mollitia, numquam ea vitae sed sunt fuga molestiae eum iste. Ducimus mollitia, numquam ea vitae sed sunt fuga molestiae eum iste.",
+        "author": "Mihajlo Kostić",
+        "date": "2023-08-14"
+    },
+    "someMarkdownd": {
+        "title": "Some Markdown",
+        "file": "someMarkdown.md",
+        "previewImage": "forrest.jpg",
+        "previewText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus mollitia, numquam ea vitae sed sunt fuga molestiae eum iste.",
+        "author": "Mihajlo Kostić",
+        "date": "2023-08-14"
+    }
+}

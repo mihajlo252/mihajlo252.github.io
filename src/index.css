@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+} 
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'K2D', sans-serif;
+}
+
+#root {
+    min-height: 100dvh;
+    width: 100dvw;
+}
+
+p {
+    text-indent: 1rem;
+}
