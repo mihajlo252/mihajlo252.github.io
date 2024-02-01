@@ -13,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'K2D', sans-serif;
+    overflow-y: scroll;
 }
 
 #root {
