@@ -2,7 +2,7 @@ import MarkDown from "markdown-to-jsx";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 
-export const BlogArticle = () => {
+export const ProjectArticle = () => {
 	const location = useLocation();
 	const { post } = location.state;
 
@@ -22,14 +22,14 @@ export const BlogArticle = () => {
 	}, []);
 
 	return (
-		<div className="hero min-h-screen py-44 px-44 max-[1500px]:px-32 max-[800px]:px-16 max-[600px]:px-4">
-			<div className="hero-content flex-col lg:flex-row p-0 max-w-full">
+		<div className="hero min-h-screen px-44 py-44 max-[1500px]:px-32 max-[800px]:px-16 max-[600px]:px-4">
+			<div className="hero-content max-w-full flex-col p-0 lg:flex-row">
 				<MarkDown
 					options={{
 						overrides: {
 							h1: {
 								component: (props) => (
-									<h1 className="text-5xl text-primary mb-10 font-bold max-[700px]:text-4xl">
+									<h1 className="mb-10 text-5xl font-bold text-secondary max-[700px]:text-4xl">
 										{props.children}
 									</h1>
 								),

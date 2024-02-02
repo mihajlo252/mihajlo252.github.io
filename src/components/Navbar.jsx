@@ -17,14 +17,14 @@ export const Navbar = () => {
 			className={`bg-base-100 w-full max-h-max items-center grid grid-cols-[1fr_1fr] px-32 pt-14 overflow-x-hidden max-[1500px]:px-16 max-[800px]:px-6 ${NavStyles.nav_container}`}
 		>
 			<h1
-				className={`normal-case text-4xl w-max font-bold text-[#eaeaea] max-[600px]:text-3xl max-[400px]:text-2xl`}
+				className={`w-max text-4xl font-bold normal-case text-primary max-[600px]:text-3xl max-[400px]:text-2xl`}
 			>
 				Mihajlo Kostić
 			</h1>
 			<div className="place-self-end">
 				
 					<button
-						className="btn btn-ghost place-self-end p-0 z-10"
+						className="btn btn-ghost z-10 place-self-end p-0"
 						type="button"
 						onClick={handleToggleMenu}
 					>
@@ -50,7 +50,7 @@ export const Navbar = () => {
 						About
 					</NavLink>
 					<NavLink
-						to="/blog"
+						to="/projects"
 						onClick = {() => {
 							setToggleMenu(false);
 						}}
@@ -61,7 +61,7 @@ export const Navbar = () => {
 						}
 						disabled={toggleMenu ? false : true}
 					>
-						Blog
+						Projects
 					</NavLink>
 				</div>
 			</div>
