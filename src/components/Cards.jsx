@@ -20,15 +20,15 @@ export const Cards = ({ posts }) => {
               rel="preload"
               src={`assets/images/${post.previewImage}`}
               alt={post.title}
-              className=" w-full max-h-full object-cover"
+              className="max-h-80 w-full object-cover"
             />
           </figure>
           <div className="card-body justify-between text-sm">
-            <h1 className="card-title text-primary">{post.title}</h1>
+            <h1 className="card-title text-secondary">{post.title}</h1>
             <p className="indent-0">{post.previewText}</p>
-            <div className="card-actions justify-center mt-5">
+            <div className="card-actions mt-5 justify-center">
               <Link
-                to={`/blog/${post.title.replace(/\s+/g, "-").toLowerCase()}`}
+                to={`/projects/${post.title.replace(/\s+/g, "-").toLowerCase()}`}
                 state={{ post: post }}
                 className="btn btn-primary"
                 onClick={() => {

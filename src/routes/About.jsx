@@ -4,10 +4,10 @@ import { BsArrowsAngleExpand } from "react-icons/bs";
 
 export const About = () => {
 	return (
-		<div className="hero justify-center place-items-start py-44 px-44 max-[1500px]:px-32 max-[800px]:px-32">
-			<div className="hero-content flex-col min-[1400px]:flex-row items-start gap-20 p-0 max-w-full">
-				<div className="flex flex-col gap-5 relative">
-					<h1 className="text-5xl max-w-max w-[90%] font-bold text-primary mb-10 max-[700px]:text-4xl">
+		<div className="hero place-items-start justify-center px-44 py-44 max-[1500px]:px-32 max-[800px]:px-32">
+			<div className="hero-content max-w-full flex-col items-start gap-20 p-0 min-[1400px]:flex-row">
+				<div className="relative flex flex-col gap-5">
+					<h1 className="mb-10 w-[90%] max-w-max text-5xl font-bold text-secondary max-[700px]:text-4xl">
 						My name is Mihajlo Kostić and this is me!
 					</h1>
 					<p className="max-[700px]:text-[.9rem]">
@@ -51,7 +51,7 @@ export const About = () => {
 							alt="CV Example"
 						/>
 						<button
-							className="btn bg-base-300 border-none bg-opacity-50 absolute bottom-2 right-2 rounded-full max-[800px]:hidden"
+							className="btn absolute bottom-2 right-2 rounded-full border-none bg-base-300 bg-opacity-50 max-[800px]:hidden"
 							onClick={() => window.my_modal_1.showModal()}
 							aria-label="Expand Image"
 						>
