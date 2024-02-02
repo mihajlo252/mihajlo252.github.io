@@ -1,26 +1,18 @@
 {
-    "someMarkdown": {
-        "title": "Some Markdown",
-        "file": "someMarkdown.md",
-        "previewImage": "forrest.jpg",
-        "previewText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus mollitia, numquam ea vitae sed sunt fuga molestiae eum iste.",
+    "rollCreate": {
+        "title": "RollCreate",
+        "file": "rollcreate.md",
+        "previewImage": "rollcreate.png",
+        "previewText": "Dungeons&Dragons character and campaign creator and viewer",
         "author": "Mihajlo Kostić",
-        "date": "2023-08-14"
+        "date": "2024-02-02"
     },
-    "anotherMarkdown": {
-        "title": "Another Markdown",
-        "file": "anotherMarkdown.md",
-        "previewImage": "road.jpg",
-        "previewText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus mollitia, numquam ea vitae sed sunt fuga molestiae eum iste. Ducimus mollitia, numquam ea vitae sed sunt fuga molestiae eum iste.",
+    "genericPlatformer": {
+        "title": "Generic Platformer",
+        "file": "genericPlatformer.md",
+        "previewImage": "genericPlatformer.png",
+        "previewText": "A simple, one level, demo of a platformer game made with HTML canvas.",
         "author": "Mihajlo Kostić",
-        "date": "2023-08-14"
-    },
-    "someMarkdownd": {
-        "title": "Some Markdown",
-        "file": "someMarkdown.md",
-        "previewImage": "forrest.jpg",
-        "previewText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus mollitia, numquam ea vitae sed sunt fuga molestiae eum iste.",
-        "author": "Mihajlo Kostić",
-        "date": "2023-08-14"
+        "date": "2022-06-22"
     }
 }
