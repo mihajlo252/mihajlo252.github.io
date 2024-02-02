@@ -11,15 +11,15 @@ import {
 import { Root } from "./layout/Root";
 
 // Routes
-import { Blog } from "./routes/Blog";
 import { About } from "./routes/About";
-import { BlogArticle } from "./routes/BlogArticle";
+import { Projects } from "./routes/Projects";
+import { ProjectArticle } from "./routes/ProjectArticle";
 
 const router = createHashRouter(createRoutesFromElements([
   <Route path="/" element={<Root />}>
     <Route index element={<About />} />
-    <Route path="blog" element={<Blog />} />
-    <Route path="blog/:id" element={<BlogArticle />} />
+    <Route path="projects" element={<Projects />} />
+    <Route path="projects/:id" element={<ProjectArticle />} />
   </Route>
 ]
 ))
