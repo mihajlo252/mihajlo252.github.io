@@ -1,22 +1,24 @@
 import React from "react";
-import { BsGithub } from "react-icons/bs";
-
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export const Footer = () => {
-  return (
-    <div className="footer">
-      <footer className="footer footer-center p-10 bg-base-200 text-white-content">
-        <div>
-          <div className="grid grid-flow-col gap-4">
-            <a href="https://github.com/mihajlo252" aria-label="Github Link">
-              <BsGithub size={30}/>
-            </a>
-          </div>
-        </div>
-        <div>
+	return (
+		<div className="footer">
+			<footer className="text-white-content footer footer-center bg-base-200 p-10">
+				<div>
+					<div className="flex items-center gap-4">
+						<a href="https://github.com/mihajlo252" aria-label="Github Link">
+							<BsGithub size={30} />
+						</a>
+						<a href="https://www.linkedin.com/in/mihajlo-kostic/" aria-label="LinedIn Link">
+							<BsLinkedin size={30} />
+						</a>
+					</div>
+				</div>
+				<div>
           <p className="font-bold">All rights reserved © Mihajlo Kostić 2023</p>
         </div>
-      </footer>
-    </div>
-  );
+			</footer>
+		</div>
+	);
 };

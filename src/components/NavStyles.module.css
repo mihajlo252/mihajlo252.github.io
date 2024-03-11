@@ -4,7 +4,6 @@
 
 .navlink {
   position: relative;
-  transform: translateY(0);
 }
 
 .navlink:last-of-type {
@@ -32,22 +31,4 @@
 
 .navlink[aria-current="page"]::after {
   transform: scaleX(1);
-}
-
-.menu {
-  transition: var(--transition);
-  margin-right: 10rem;
-}
-
-.menu[data-toggle="true"] {
-  opacity: 1;
-}
-
-.menu[data-toggle="false"] {
-  opacity: 0;
-}
-
-.menu[data-toggle="false"] .navlink {
-  transform: translateY(-50%);
-  background-color: transparent;
 }

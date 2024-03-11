@@ -22,14 +22,11 @@ export const Projects = () => {
 	return (
 		<div className="flex flex-col px-44 py-44 max-[1500px]:px-32 max-[800px]:px-16 max-[600px]:px-4">
 			<main className="mb-20">
-				<h1 className="mb-10 text-5xl font-semibold text-secondary max-[700px]:text-4xl">
-					Projects
-				</h1>
+				<h1 className="mb-10 text-5xl font-semibold text-secondary max-[700px]:text-4xl">Projects</h1>
 				<p className="max-[700px]:text-[.9rem]">
-					These are some of the projects that I've been working on for quite some time
-					now. Almost none are finished, but they were stepping stones that have propeled
-					me forward. On them I have learned everything, from the basics to some of the
-					newest and widely used tehnologies.
+					These are some of the projects I've been working on for quite some time now. Although few are finished, they
+					have served as stepping stones propelling me forward. Through them, I've learned everything from the basics to
+					some of the newest and widely used technologies.
 				</p>
 			</main>
 			<Cards posts={fileNameList} />
