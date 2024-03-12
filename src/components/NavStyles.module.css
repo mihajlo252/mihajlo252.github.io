@@ -7,7 +7,7 @@
 }
 
 .navlink:last-of-type {
-  transition: transform var(--transition);
+  transition: transform var(--transition), color var(--transition);
   transition-delay: 50ms;
 }
 
