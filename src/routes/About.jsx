@@ -35,7 +35,7 @@ export const About = () => {
 							development processes.
 						</p>
 						<p>
-							Furthermore, I bring a well-rounded skill set that extends beyond frontend development. I have hands-on
+							Furthermore, I bring a well-rounded skill set that extends beyond frontend development. I have practical
 							experience with backend technologies such as Node.js/Express.js for server-side development and databases
 							including MySQL, MongoDB, Firebase, and Supabase for data management. This breadth of expertise allows me
 							to seamlessly integrate frontend and backend components to deliver comprehensive and scalable solutions.
