@@ -15,9 +15,9 @@ export const Navbar = () => {
 					<NavLink
 						to="/"
 						className={({ isActive, isPending }) =>
-							`btn hover:bg-transparent hover:text-[#eaeaea] p-0 bg-transparent border-none normal-case text-xl max-[600px]:text-lg ${
+							`btn hover:bg-transparent hover:text-primary p-0 bg-transparent border-none normal-case text-xl max-[600px]:text-lg ${
 								NavStyles.navlink
-							} ${isActive ? "text-[#eaeaea]" : " text-slate-400"}`
+							} ${isActive ? "text-primary" : " text-slate-400"}`
 						}
 					>
 						About
@@ -25,9 +25,9 @@ export const Navbar = () => {
 					<NavLink
 						to="/projects"
 						className={({ isActive, isPending }) =>
-							`btn hover:bg-transparent hover:text-[#eaeaea] p-0 bg-transparent border-none normal-case text-xl max-[600px]:text-lg ${
+							`btn hover:bg-transparent hover:text-primary p-0 bg-transparent border-none normal-case text-xl max-[600px]:text-lg ${
 								NavStyles.navlink
-							} ${isActive ? "text-[#eaeaea]" : "text-slate-400"}`
+							} ${isActive ? "text-primary" : "text-slate-400"}`
 						}
 					>
 						Projects

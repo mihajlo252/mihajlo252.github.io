@@ -18,7 +18,6 @@ export const ProjectArticle = () => {
 
 	useEffect(() => {
 		fetchMarkdown();
-		console.log(markdown);
 	}, []);
 
 	return (

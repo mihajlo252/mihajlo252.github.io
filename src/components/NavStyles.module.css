@@ -12,6 +12,7 @@
 }
 
 .navlink::after {
+  @apply bg-primary;
   content: "";
   position: absolute;
   bottom: 5px;
@@ -20,7 +21,6 @@
   transform-origin: left ;
   width: 100%;
   height: 3px;
-  background-color: #eaeaea;
   transition: transform var(--transition);
   border-radius: 50vh;
 }

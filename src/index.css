@@ -22,5 +22,6 @@ body {
 }
 
 p {
+    @apply text-primary;
     text-indent: 1rem;
 }
