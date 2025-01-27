@@ -15,12 +15,12 @@
         "author": "Mihajlo Kostić",
         "date": "2022-06-22"
     },
-    "homeSpending": {
-        "title": "homeSpending",
-        "file": "homeSpending.md",
-        "previewImage": "homeSpending.png",
-        "previewText": "Get a grip on your finances.",
+    "dashAndPlay": {
+        "title": "Dash&Play",
+        "file": "dashAndPlay.md",
+        "previewImage": "dashAndPlay.png",
+        "previewText": "A digital Dungeons&Dragons character sheet with interactive capabilities",
         "author": "Mihajlo Kostić",
-        "date": "2023-06-16"
+        "date": "2025-01-28"
     }
 }
