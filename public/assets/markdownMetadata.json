@@ -14,5 +14,16 @@
         "previewText": "A simple, one level, demo of a platformer game made with HTML canvas.",
         "author": "Mihajlo Kostić",
         "date": "2022-06-22"
+<<<<<<< HEAD
+=======
+    },
+    "dashAndPlay": {
+        "title": "Dash&Play",
+        "file": "dashAndPlay.md",
+        "previewImage": "dashAndPlay.png",
+        "previewText": "A digital Dungeons&Dragons character sheet with interactive capabilities",
+        "author": "Mihajlo Kostić",
+        "date": "2025-01-28"
+>>>>>>> 1996840559b6cb43ad6a8c9c7e7e81af7bba5462
     }
 }

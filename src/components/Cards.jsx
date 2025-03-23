@@ -20,7 +20,7 @@ export const Cards = ({ posts }) => {
               rel="preload"
               src={`assets/images/${post.previewImage}`}
               alt={post.title}
-              className="max-h-80 w-full object-cover"
+              className="max-h-[200px] min-h-[200px] w-full object-cover"
             />
           </figure>
           <div className="card-body justify-between text-sm">
