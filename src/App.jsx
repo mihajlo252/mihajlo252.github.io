@@ -20,6 +20,7 @@ const router = createHashRouter(createRoutesFromElements([
     <Route index element={<About />} />
     <Route path="projects" element={<Projects />} />
     <Route path="projects/:id" element={<ProjectArticle />} />
+    <Route path="*" element={<ProjectArticle />} />
   </Route>
 ]
 ))

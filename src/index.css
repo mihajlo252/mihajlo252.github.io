@@ -1,4 +1,6 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@400;500;600;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=K2D:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* font-family: 'Palanquin', sans-serif; */
     font-family: 'K2D', sans-serif;
     overflow-y: scroll;
 }
