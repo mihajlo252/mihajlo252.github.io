@@ -20,8 +20,3 @@ body {
     min-height: 100dvh;
     width: 100dvw;
 }
-
-p {
-    @apply text-primary;
-    text-indent: 1rem;
-}

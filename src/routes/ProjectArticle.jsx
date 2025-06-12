@@ -21,7 +21,7 @@ export const ProjectArticle = () => {
 	}, []);
 
 	return (
-		<div className="hero min-h-screen px-44 py-44 max-[1500px]:px-32 max-[800px]:px-16 max-[600px]:px-4">
+		<div className="hero min-h-screen place-items-start px-44 py-44 max-[1500px]:px-32 max-[800px]:px-16 max-[600px]:px-4">
 			<div className="hero-content max-w-full flex-col p-0 lg:flex-row">
 				<MarkDown
 					options={{
