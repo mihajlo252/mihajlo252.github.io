@@ -1,10 +1,8 @@
-import Projects from '#/components/projects'
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
-export const Route = createFileRoute('/projects')({ component: ProjectsPage })
-
-function ProjectsPage() {
-  return (
-    <Projects />
-  )
-}
+/** The old URL for this page. Kept so existing links keep working. */
+export const Route = createFileRoute("/projects")({
+	beforeLoad: () => {
+		throw redirect({ to: "/work", replace: true });
+	},
+});

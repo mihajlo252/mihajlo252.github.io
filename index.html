@@ -1,13 +1,37 @@
-
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-new</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang="en" style="background: #0b0b0c">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mihajlo Kostić — Frontend Developer</title>
+		<meta
+			name="description"
+			content="Frontend developer specializing in React, TypeScript and WordPress. Projects, writing, and a way to get in touch."
+		/>
+		<link rel="icon" href="/favicon.ico" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="theme-color" content="#0b0b0c" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<script>
+			// Stamp the saved theme before first paint so the page never flashes
+			// the wrong palette. Kept in sync with src/lib/theme.ts.
+			(function () {
+				try {
+					var saved = localStorage.getItem("mk-portfolio-theme");
+					if (saved !== "dark" && saved !== "light") {
+						saved = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+					}
+					document.documentElement.setAttribute("data-theme", saved);
+					document.documentElement.style.background = saved === "light" ? "#f4f3ee" : "#0b0b0c";
+				} catch (e) {
+					document.documentElement.setAttribute("data-theme", "dark");
+				}
+			})();
+		</script>
+	</head>
+	<body>
+		<div id="app"></div>
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
 </html>
