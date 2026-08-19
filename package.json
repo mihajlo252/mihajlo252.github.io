@@ -10,7 +10,8 @@
     "host": "vite dev --host",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "posts:build": "node scripts/generate-posts.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
@@ -33,7 +34,9 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.1.4",
+    "gray-matter": "^4.0.3",
     "jsdom": "^28.1.0",
+    "marked": "^18.0.10",
     "typescript": "^5.7.2",
     "vite": "^7.3.1",
     "vite-tsconfig-paths": "^5.1.4",

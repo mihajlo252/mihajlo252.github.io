@@ -73,7 +73,7 @@ export const projects: Project[] = [
 		tags: "React · Supabase · PWA",
 		year: "2025",
 		status: "done",
-		image: null,
+		image: "thegatheringtableimage.png",
 		liveUrl: "https://thegatheringtable.netlify.app",
 		repoUrl: "https://github.com/mihajlo252/the-gathering-table",
 		meta: {

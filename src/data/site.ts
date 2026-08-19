@@ -19,7 +19,8 @@ export const site = {
 	linkedinHandle: "/in/mihajlo-kostic",
 	location: "Serbia · remote-friendly",
 	cv: "/assets/cv/MihajloKostic_CV.pdf",
-	portrait: "/nobgportrait.png",
+	portrait: "/linkedin-slikajpeg.jpg",
+	fun: "/fun.webp",
 };
 
 /** Rotates in the hero headline. */
@@ -33,19 +34,6 @@ export const heroBadges = [
 
 export const heroLead =
 	"Frontend developer specializing in React, TypeScript and WordPress, with 2+ years building and maintaining 100+ production websites.";
-
-export const marquee = [
-	"React",
-	"TypeScript",
-	"JavaScript",
-	"WordPress",
-	"Tailwind CSS",
-	"Supabase",
-	"Node.js",
-	"PHP",
-	"SQL",
-	"Git",
-];
 
 // The groupings and their contents come from the CV. PLACEHOLDER — the
 // percentages are self-assessed; adjust them or drop the bars entirely.

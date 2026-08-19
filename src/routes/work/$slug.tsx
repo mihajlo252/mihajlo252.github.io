@@ -60,7 +60,7 @@ function CaseStudyPage() {
 
 			{project.image ? (
 				<div className="case-hero">
-					<img src={project.image} alt={`${project.name} screenshot`} />
+					<img src={`/assets/${project.image}`} alt={`${project.name} screenshot`} />
 				</div>
 			) : (
 				<div className="case-hero case-hero-empty">Hero screenshot</div>

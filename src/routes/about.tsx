@@ -69,7 +69,10 @@ function AboutPage() {
 
 				<div>
 					<div className="portrait">
-						<img src={site.portrait} alt={site.name} />
+						<div className="portrait-flip">
+							<img className="portrait-face" src={site.portrait} alt={site.name} />
+							<img className="portrait-face portrait-face-back" src={site.fun} alt={`${site.name}, off duty`} />
+						</div>
 					</div>
 					<div className="about-side-stack">
 						{stack.map((item) => (

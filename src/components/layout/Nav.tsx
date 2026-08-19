@@ -20,8 +20,10 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
 
 	return (
 		<nav className="nav">
-			<Link to="/" className="nav-brand" ref={magnet}>
-				{site.brand}
+			<Link to="/" className="nav-brand"  ref={magnet}>
+				{site.brand.split("").map((letter, i) => (
+					<p key={i}>{letter}</p>
+				))}
 			</Link>
 			<ul className="nav-links">
 				{LINKS.map((link) => (

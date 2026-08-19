@@ -1,23 +1,51 @@
 /**
  * Writing.
  *
- * PLACEHOLDER — all of it. There are no real posts yet; these are the demo
- * entries from the design, kept so the page has something to render. Empty the
- * array and /writing falls back to an honest empty state instead.
+ * GENERATED — do not edit by hand. Source content lives in
+ * src/content/posts/*.md and this file is rebuilt from it by
+ * scripts/generate-posts.mjs (wired into Vite via
+ * scripts/vite-plugin-posts.mjs). Add, edit, or remove a .md file there and
+ * this file updates on the next dev reload or build.
  */
 
-export interface Post {
-	date: string;
-	title: string;
-	tag: string;
-	read: string;
+export type Post = {
+	slug: string
+	blurb: string
+	date: string
+	title: string
+	tag: string
+	read: string
+	html: string
 }
 
 export const posts: Post[] = [
-	{ date: "2026 · 04", title: "Animating without dropping frames", tag: "Performance", read: "8 min" },
-	{ date: "2026 · 02", title: "Design tokens that survive a redesign", tag: "Systems", read: "11 min" },
-	{ date: "2025 · 11", title: "Why your loading state is the product", tag: "Craft", read: "6 min" },
-	{ date: "2025 · 08", title: "Reading a flame graph without panicking", tag: "Performance", read: "9 min" },
-	{ date: "2025 · 05", title: "Building a game loop by hand", tag: "Notes", read: "5 min" },
-	{ date: "2025 · 01", title: "The case against the generic modal", tag: "Craft", read: "7 min" },
+	{
+		slug: "second-post",
+		title: "Second Post",
+		blurb: "A throwaway post used to test the writing pipeline end to end.",
+		tag: "Testing",
+		date: "2026 · 08",
+		read: "1 min",
+		html: "<h1>Test</h1>\n",
+	},
+	{
+		slug: "first-post",
+		title: "First post",
+		blurb: "A throwaway post used to test the writing pipeline end to end.",
+		tag: "Testing",
+		date: "2026 · 08",
+		read: "1 min",
+		html: "<h1>Hello from first post</h1>\n<p>tralalalalalalaalal\ntralalalalalalaalal\ntralalalalalalaalal\ntralalalalalalaalal\ntralalalalalalaalal</p>\n<h2>tralalalalalalaalal</h2>\n<p>tralalalalalalaalaltralalalalalalaalal\ntralalalalalalaalal\ntralalalalalalaalal\ntralalalalalalaalal</p>\n",
+	},
 ];
+
+export function getPost(slug: string): Post | undefined {
+	return posts.find((p) => p.slug === slug);
+}
+
+/** Wraps around, so the last post points back at the first. */
+export function getNextPost(slug: string): Post | undefined {
+	if (posts.length === 0) return undefined;
+	const i = posts.findIndex((p) => p.slug === slug);
+	return posts[(i + 1) % posts.length];
+}

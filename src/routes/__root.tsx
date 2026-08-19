@@ -7,6 +7,7 @@ import { Footer } from "#/components/layout/Footer";
 import { Nav } from "#/components/layout/Nav";
 import { PageWipe } from "#/components/layout/PageWipe";
 import { useKeyboardNav } from "#/lib/useKeyboardNav";
+import { usePageWipe } from "#/lib/usePageWipe";
 import { useTheme } from "#/lib/theme";
 
 import "../styles.css";
@@ -19,13 +20,14 @@ export const Route = createRootRoute({
 function RootComponent() {
 	const { theme, toggleTheme } = useTheme();
 	useKeyboardNav(toggleTheme);
+	const { wipeKey, isTransitioning } = usePageWipe();
 
 	return (
 		<div className="shell">
 			<Backdrop />
-			<PageWipe />
+			<PageWipe wipeKey={wipeKey} />
 			<Nav theme={theme} onToggleTheme={toggleTheme} />
-			<main className="main">
+			<main className={isTransitioning ? "main main-transition" : "main"}>
 				<Outlet />
 			</main>
 			<Footer />

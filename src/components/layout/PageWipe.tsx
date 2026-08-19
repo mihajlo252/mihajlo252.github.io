@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-import { usePageWipe } from "#/lib/usePageWipe";
+interface PageWipeProps {
+	wipeKey: number;
+}
 
 /** Accent panel that sweeps across the viewport on each route change. */
-export function PageWipe() {
-	const wipeKey = usePageWipe();
+export function PageWipe({ wipeKey }: PageWipeProps) {
 	const [finished, setFinished] = useState(0);
 
 	if (wipeKey === 0 || wipeKey === finished) return null;

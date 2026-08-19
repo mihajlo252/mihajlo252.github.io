@@ -46,11 +46,11 @@
 	--faint: rgba(237, 237, 230, 0.38);
 	--line: rgba(237, 237, 230, 0.16);
 	--grid: rgba(237, 237, 230, 0.055);
-	--accent: #c8f751;
+	--accent: #2c79cd;
 	--accent-ink: #0b0b0c;
-	--accent-text: #c8f751;
+	--accent-text: #2c79cd;
 	--glow-a: color-mix(in oklab, var(--accent) 16%, transparent);
-	--glow-b: rgba(120, 110, 255, 0.16);
+	--glow-b: rgba(255, 180, 110, 0.16);
 	--glow-c: color-mix(in oklab, var(--accent) 9%, transparent);
 	color-scheme: dark;
 }
@@ -63,12 +63,12 @@
 	--faint: rgba(16, 16, 17, 0.44);
 	--line: rgba(16, 16, 17, 0.18);
 	--grid: rgba(16, 16, 17, 0.06);
-	--accent: #c8f751;
+	--accent: #2c79cd;
 	--accent-ink: #101011;
 	/* Lime on cream fails contrast, so text uses the olive cut while fills stay lime. */
-	--accent-text: #4b6605;
+	--accent-text: #2c79cd;
 	--glow-a: color-mix(in oklab, var(--accent) 30%, transparent);
-	--glow-b: rgba(120, 110, 255, 0.13);
+	--glow-b: rgba(255, 180, 110, 0.16);
 	--glow-c: color-mix(in oklab, var(--accent) 16%, transparent);
 	color-scheme: light;
 }
@@ -144,15 +144,6 @@
 	}
 	100% {
 		transform: translateY(-100%);
-	}
-}
-
-@keyframes marquee {
-	from {
-		transform: translateX(0);
-	}
-	to {
-		transform: translateX(-50%);
 	}
 }
 
@@ -260,11 +251,19 @@ img {
 }
 
 .fade-up {
-	animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0s) both;
+	animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--page-delay, 0s) + var(--d, 0s)) both;
 }
 
 .fade-in {
-	animation: fadeIn 0.5s ease both;
+	animation: fadeIn 0.35s ease var(--page-delay, 0s) both;
+}
+
+/* While the page wipe is covering the screen (see usePageWipe), hold the
+   incoming page's fade-in back so it only reveals once the wipe is most of
+   the way through, instead of showing through underneath it. */
+.main-transition .fade-in,
+.main-transition .fade-up {
+	--page-delay: 0.45s;
 }
 
 /* --- 5. Chrome: backdrop, wipe, nav, footer ------------------------------- */
@@ -331,6 +330,16 @@ img {
 	display: inline-block;
 	color: var(--accent-text);
 	white-space: nowrap;
+	p {
+		transform-box: fill-box;
+		transform-origin: center;
+		transition: transform 770ms cubic-bezier(0.34, 1.56, 0.64, 1);
+		transition-delay: calc(sibling-index() * 0.02s);
+		display: inline-block;
+	}
+	&:hover p {
+		transform: rotateX(360deg);
+	}
 }
 
 .nav-links {
@@ -636,41 +645,6 @@ img {
 	line-height: 1.6;
 	color: var(--dim);
 	text-wrap: pretty;
-}
-
-/* Marquee ------------------------------------------------------------------ */
-
-.marquee {
-	margin: 6rem auto 0;
-	max-width: var(--maxw);
-	width: calc(100% - var(--gutter) * 2);
-	border: 1px solid var(--line);
-	border-radius: 999px;
-	overflow: hidden;
-	padding: 15px 0;
-	background: var(--panel);
-}
-
-.marquee-track {
-	display: flex;
-	width: max-content;
-	animation: marquee 26s linear infinite;
-}
-
-.marquee:hover .marquee-track {
-	animation-play-state: paused;
-}
-
-.marquee-group {
-	display: flex;
-	gap: 2.75rem;
-	padding-right: 2.75rem;
-	font-family: var(--mono);
-	font-size: 0.78rem;
-	letter-spacing: 0.16em;
-	text-transform: uppercase;
-	color: var(--faint);
-	white-space: nowrap;
 }
 
 /* Project cards ------------------------------------------------------------ */
@@ -1171,6 +1145,93 @@ img {
 
 /* --- 9. About / Writing / Contact ------------------------------------------ */
 
+.meta-grid-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.post-body {
+	max-width: 42rem;
+	margin: 1rem 0 0;
+	padding: 3rem 0 0;
+	font-size: 1.03rem;
+	line-height: 1.75;
+	color: var(--dim);
+}
+
+.post-body > * + * {
+	margin-top: 1.25em;
+}
+
+.post-body h1,
+.post-body h2,
+.post-body h3 {
+	margin-top: 2em;
+	color: var(--ink);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	line-height: 1.25;
+}
+
+.post-body h1 {
+	font-size: 1.75rem;
+}
+
+.post-body h2 {
+	font-size: 1.4rem;
+}
+
+.post-body h3 {
+	font-size: 1.15rem;
+}
+
+.post-body p {
+	text-wrap: pretty;
+}
+
+.post-body a {
+	color: var(--accent-text);
+	text-underline-offset: 0.2em;
+}
+
+.post-body ul,
+.post-body ol {
+	padding-left: 1.4em;
+}
+
+.post-body li + li {
+	margin-top: 0.4em;
+}
+
+.post-body blockquote {
+	margin: 0;
+	padding-left: 1.25em;
+	border-left: 2px solid var(--line);
+	color: var(--faint);
+}
+
+.post-body code {
+	font-family: var(--mono);
+	font-size: 0.875em;
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 4px;
+	padding: 0.1em 0.35em;
+}
+
+.post-body pre {
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: var(--r-md);
+	padding: 1.25rem;
+	overflow-x: auto;
+}
+
+.post-body pre code {
+	background: none;
+	border: none;
+	padding: 0;
+}
+
 .about-grid {
 	display: grid;
 	grid-template-columns: 1fr 400px;
@@ -1198,10 +1259,7 @@ img {
 	width: 100%;
 	aspect-ratio: 3 / 4;
 	max-height: 26rem;
-	border: 1px solid var(--line);
-	border-radius: var(--r-xl);
-	overflow: hidden;
-	background: var(--panel);
+	perspective: 1400px;
 }
 
 .portrait img {
@@ -1209,6 +1267,40 @@ img {
 	height: 100%;
 	object-fit: cover;
 	object-position: top center;
+}
+
+.portrait-flip {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portrait:hover .portrait-flip {
+	transform: rotateY(180deg);
+}
+
+/* Border, radius, and background live on each face (not .portrait), so the
+   whole card — not just the photo inside it — rotates as one piece. */
+.portrait-face {
+	position: absolute;
+	inset: 0;
+	border: 1px solid var(--line);
+	border-radius: var(--r-xl);
+	overflow: hidden;
+	background: var(--panel);
+	backface-visibility: hidden;
+}
+
+.portrait-face-back {
+	transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.portrait-flip {
+		transition: none;
+	}
 }
 
 .about-side-stack {
@@ -1504,10 +1596,6 @@ a.link-row:hover {
 		padding-top: 3.25rem;
 	}
 
-	.marquee {
-		margin-top: 3.5rem;
-	}
-
 	.card-grid,
 	.stack-grid,
 	.shot-grid,
@@ -1571,15 +1659,6 @@ a.link-row:hover {
 
 	.backdrop-drift {
 		animation: none;
-	}
-
-	.marquee-track {
-		animation: none;
-		width: 100%;
-	}
-
-	.marquee-group + .marquee-group {
-		display: none;
 	}
 
 	.caret {

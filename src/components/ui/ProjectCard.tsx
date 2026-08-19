@@ -15,7 +15,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 			</div>
 			<div className={project.image ? "pcard-thumb" : "pcard-thumb pcard-thumb-empty"}>
 				{project.image ? (
-					<img src={project.image} alt={`${project.name} preview`} loading="lazy" />
+					<img src={`/assets/${project.image}`} alt={`${project.name} preview`} loading="lazy" />
 				) : (
 					<span>Screenshot</span>
 				)}
