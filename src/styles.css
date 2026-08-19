@@ -266,6 +266,19 @@ img {
 	--page-delay: 0.45s;
 }
 
+/* Visible to screen readers only, so animated text can expose its full value. */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
 /* --- 5. Chrome: backdrop, wipe, nav, footer ------------------------------- */
 
 .shell {
@@ -306,6 +319,18 @@ img {
 	border-radius: 48px;
 	animation: wipe 0.78s cubic-bezier(0.76, 0, 0.24, 1) both;
 	pointer-events: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wipe-text {
+	color: #101001;
+	mix-blend-mode: color-dodge;
+	font-size: clamp(2rem, 20vw, 80rem);
+	p {
+		display: inline-block;
+	}
 }
 
 .nav {
@@ -632,6 +657,12 @@ img {
 	vertical-align: -0.12em;
 	margin-left: 0.12em;
 	animation: blink 1.1s steps(1) infinite;
+}
+
+/* Solid while characters are being typed or erased, like a real terminal. */
+.caret-solid {
+	animation: none;
+	opacity: 1;
 }
 
 .hero-aside {

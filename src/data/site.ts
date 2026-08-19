@@ -24,7 +24,8 @@ export const site = {
 };
 
 /** Rotates in the hero headline. */
-export const heroWords = ["enjoy.", "trust.", "remember."];
+// export const heroWords = ["enjoy.", "trust.", "remember."];
+export const heroWords = ["want.", "need.", "love.", "use.", "remember.", "understand.", "enjoy.", "trust.", "value.", "notice."];
 
 export const heroBadges = [
 	{ label: "Open to work", live: true },

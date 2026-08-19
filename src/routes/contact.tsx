@@ -7,7 +7,6 @@ export const Route = createFileRoute("/contact")({ component: ContactPage });
 
 const LINKS = [
 	{ k: "Email", v: site.email, href: `mailto:${site.email}` },
-	{ k: "Phone", v: site.phone, href: `tel:${site.phone.replace(/\s/g, "")}` },
 	{ k: "GitHub", v: site.githubHandle, href: site.github },
 	{ k: "LinkedIn", v: site.linkedinHandle, href: site.linkedin },
 	{ k: "Location", v: site.location, href: null },
@@ -64,7 +63,7 @@ function ContactPage() {
 					<div className="form-grid">
 						<label className="field">
 							<span className="field-label">Name</span>
-							<input name="name" className="input" placeholder="Ada Lovelace" autoComplete="name" required />
+							<input name="name" className="input" placeholder="Anderson Smith" autoComplete="name" required />
 						</label>
 						<label className="field">
 							<span className="field-label">Email</span>
