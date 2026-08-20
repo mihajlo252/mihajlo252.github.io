@@ -23,7 +23,7 @@ function getRandom(n: number): number {
  * erases it, then moves to the next one. The caret only blinks while the word
  * rests, so it reads like a real terminal. Reduced motion swaps words instantly.
  */
-export function RotatingWord({ words, holdMs = 4000, typeMs = 120, deleteMs = 35 }: RotatingWordProps) {
+export function RotatingWord({ words, holdMs = 4000, typeMs = 70, deleteMs = 35 }: RotatingWordProps) {
 	const [reduced] = useState(prefersReducedMotion);
 	const [index, setIndex] = useState(0);
 	const [count, setCount] = useState(() => words[0]?.length ?? 0);
@@ -48,9 +48,9 @@ export function RotatingWord({ words, holdMs = 4000, typeMs = 120, deleteMs = 35
 			timeout = setTimeout(() => {
 				setIndex((i) => (i + 1) % words.length);
 				setDeleting(false);
-			}, getRandom(typeMs) * 3);
+			}, getRandom(typeMs) * 3 + 50);
 		} else {
-			timeout = setTimeout(() => setCount((c) => c + (deleting ? -1 : 1)), deleting ? deleteMs : getRandom(typeMs));
+			timeout = setTimeout(() => setCount((c) => c + (deleting ? -1 : 1)), deleting ? deleteMs : getRandom(typeMs + 50));
 		}
 		return () => clearTimeout(timeout);
 	}, [reduced, count, deleting, word, words.length, holdMs, typeMs, deleteMs]);

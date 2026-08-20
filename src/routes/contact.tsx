@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, type SubmitEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 
 import { site } from "#/data/site";
@@ -15,11 +15,7 @@ const LINKS = [
 function ContactPage() {
 	const [sent, setSent] = useState(false);
 
-	/**
-	 * There is no backend here, so rather than fake a submission the form hands
-	 * the message to the visitor's mail client with everything filled in.
-	 */
-	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+	const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		const data = new FormData(e.currentTarget);
 		const name = String(data.get("name") ?? "");

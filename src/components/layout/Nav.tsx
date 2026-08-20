@@ -22,7 +22,7 @@ export function Nav({ theme, onToggleTheme }: NavProps) {
 		<nav className="nav">
 			<Link to="/" className="nav-brand"  ref={magnet}>
 				{site.brand.split("").map((letter, i) => (
-					<p key={i}>{letter}</p>
+					<span key={i}>{letter}</span>
 				))}
 			</Link>
 			<ul className="nav-links">

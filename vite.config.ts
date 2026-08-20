@@ -5,7 +5,6 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
 
 import viteReact from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
 import { postsPlugin } from './scripts/vite-plugin-posts.mjs'
 
@@ -13,7 +12,6 @@ const config = defineConfig({
   plugins: [
     devtools(),
     tsconfigPaths({ projects: ['./tsconfig.json'] }),
-    tailwindcss(),
     postsPlugin(),
     tanstackRouter({ target: 'react', autoCodeSplitting: true }),
     viteReact(),

@@ -1,10 +1,5 @@
 /**
- * Site-wide content, sourced from MihajloKostic_CV.pdf.
- *
- * REAL: everything below except where marked. Roles, dates, employers,
- * responsibilities, skills and education all come straight from the CV.
- *
- * PLACEHOLDER: only the self-assessed percentages on the stack bars.
+ * Site-wide content
  */
 
 export const site = {
@@ -36,8 +31,6 @@ export const heroBadges = [
 export const heroLead =
 	"Frontend developer specializing in React, TypeScript and WordPress, with 2+ years building and maintaining 100+ production websites.";
 
-// The groupings and their contents come from the CV. PLACEHOLDER — the
-// percentages are self-assessed; adjust them or drop the bars entirely.
 export const stack = [
 	{ title: "Languages", items: "JavaScript, TypeScript, HTML/CSS", pct: "90%" },
 	{ title: "React", items: "React, React Native, PWAs", pct: "88%" },
@@ -80,5 +73,4 @@ export const aboutBody = [
 	"Outside that, I build in React and TypeScript. Both of my own projects are installable PWAs backed by Supabase, because I like the problems that show up when an app has to keep working away from a good connection. My favourite details are the ones nobody notices — the empty state that explains itself, the form that doesn't lose your input.",
 ];
 
-/** Serbian (native), English (fluent). */
 export const languages = "Serbian — native · English — fluent";
