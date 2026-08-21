@@ -15,14 +15,9 @@ function prefersReducedMotion(): boolean {
 }
 
 function getRandom(n: number): number {
-	return Math.floor(Math.random() * n)
+	return Math.floor(Math.random() * n  + 50)
 }
 
-/**
- * Types the last word of the hero headline out character by character, holds it,
- * erases it, then moves to the next one. The caret only blinks while the word
- * rests, so it reads like a real terminal. Reduced motion swaps words instantly.
- */
 export function RotatingWord({ words, holdMs = 4000, typeMs = 70, deleteMs = 35 }: RotatingWordProps) {
 	const [reduced] = useState(prefersReducedMotion);
 	const [index, setIndex] = useState(0);
@@ -48,9 +43,9 @@ export function RotatingWord({ words, holdMs = 4000, typeMs = 70, deleteMs = 35 
 			timeout = setTimeout(() => {
 				setIndex((i) => (i + 1) % words.length);
 				setDeleting(false);
-			}, getRandom(typeMs) * 3 + 50);
+			}, getRandom(typeMs) * 3);
 		} else {
-			timeout = setTimeout(() => setCount((c) => c + (deleting ? -1 : 1)), deleting ? deleteMs : getRandom(typeMs + 50));
+			timeout = setTimeout(() => setCount((c) => c + (deleting ? -1 : 1)), deleting ? deleteMs : getRandom(typeMs));
 		}
 		return () => clearTimeout(timeout);
 	}, [reduced, count, deleting, word, words.length, holdMs, typeMs, deleteMs]);

@@ -1,11 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { heroBadges, heroLead, heroWords, site } from "#/data/site";
 import { RotatingWord } from "#/components/ui/RotatingWord";
-import { useMagnet } from "#/lib/useMagnet";
 
 export function Hero() {
-	const magnetPrimary = useMagnet();
-	const magnetGhost = useMagnet();
 
 	return (
 		<section className="hero">
@@ -29,10 +26,10 @@ export function Hero() {
 			<div className="hero-aside">
 				<p className="hero-lead">{heroLead}</p>
 				<div className="btn-row">
-					<Link to="/work" className="btn btn-primary" ref={magnetPrimary}>
+					<Link to="/work" className="btn btn-primary">
 						See the work <span aria-hidden="true">→</span>
 					</Link>
-					<a href={site.cv} target="_blank" rel="noreferrer" className="btn btn-ghost" ref={magnetGhost}>
+					<a href={site.cv} target="_blank" rel="noreferrer" className="btn btn-ghost">
 						Résumé <span aria-hidden="true">↓</span>
 					</a>
 				</div>

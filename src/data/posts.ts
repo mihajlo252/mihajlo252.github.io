@@ -18,7 +18,17 @@ export type Post = {
 	html: string
 }
 
-export const posts: Post[] = [];
+export const posts: Post[] = [
+	{
+		slug: "first-post",
+		title: "How to start your AI journey",
+		blurb: "Don't.",
+		tag: "~~AI~~",
+		date: "2026 · 08",
+		read: "1 min",
+		html: "<p>Thank you!</p>\n",
+	},
+];
 
 export function getPost(slug: string): Post | undefined {
 	return posts.find((p) => p.slug === slug);

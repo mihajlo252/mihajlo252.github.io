@@ -368,7 +368,8 @@ video {
 .wipe-text {
 	color: #101001;
 	mix-blend-mode: color-dodge;
-	font-size: clamp(2rem, 20vw, 80rem);
+	font-size: clamp(5rem, 50vw, calc((100vw / var(--char-count)) * 1.6));
+	text-align: center;
 	p {
 		display: inline-block;
 	}
@@ -682,6 +683,7 @@ video {
 	font-weight: 700;
 	line-height: 0.92;
 	letter-spacing: -0.045em;
+	text-wrap: nowrap;
 	animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 }
 

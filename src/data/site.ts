@@ -19,8 +19,7 @@ export const site = {
 };
 
 /** Rotates in the hero headline. */
-// export const heroWords = ["enjoy.", "trust.", "remember."];
-export const heroWords = ["want.", "need.", "love.", "use.", "remember.", "understand.", "enjoy.", "trust.", "value.", "notice."];
+export const heroWords = ["want.", "need.", "love.", "use.", "enjoy.", "trust.", "value.", "notice."];
 
 export const heroBadges = [
 	{ label: "Open to work", live: true },
@@ -32,12 +31,12 @@ export const heroLead =
 	"Frontend developer specializing in React, TypeScript and WordPress, with 2+ years building and maintaining 100+ production websites.";
 
 export const stack = [
-	{ title: "Languages", items: "JavaScript, TypeScript, HTML/CSS", pct: "90%" },
+	{ title: "Languages", items: "JavaScript, TypeScript, HTML/CSS", pct: "92%" },
 	{ title: "React", items: "React, React Native, PWAs", pct: "88%" },
 	{ title: "Styling", items: "CSS, Tailwind, responsive, accessible", pct: "85%" },
-	{ title: "WordPress", items: "Elementor, custom widgets, PHP", pct: "82%" },
+	{ title: "WordPress", items: "Elementor, custom widgets, PHP", pct: "88%" },
 	{ title: "Data", items: "Supabase, Firebase, MySQL, SQL", pct: "70%" },
-	{ title: "Also", items: "Angular, Node.js / Express, Go", pct: "55%" },
+	{ title: "Also", items: "Angular, Node.js / Express, Go", pct: "45%" },
 ];
 
 export const achievements = [
@@ -49,13 +48,13 @@ export const achievements = [
 
 export const timeline = [
 	{
-		when: "Apr 2024 — now",
+		when: "Apr 2024 — present",
 		role: "Web Developer · Santos Digital",
 		what: "Built and maintained 100+ WordPress sites — custom development, integrations and ongoing maintenance across a varied client base. Wrote JavaScript widgets and Elementor components that go past what the standard plugins do: interactive pricing tables, before/after image sliders, dynamic loop grids.",
 	},
 	{
 		when: "Oct — Nov 2023",
-		role: "Frontend Developer Intern · msg global solutions SEE",
+		role: "Frontend Developer Intern · msg global solutions South East Europe",
 		what: "Thriv3 program — three weeks across functional and technical consulting, frontend and backend development, and agile methodologies (Scrum, Waterfall). Rebuilt a website with a partner and integrated an API for live data.",
 	},
 	{
